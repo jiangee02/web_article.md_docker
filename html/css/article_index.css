@@ -1,0 +1,269 @@
+/* 文章列表页面专用样式 */
+.articles-hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.articles-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.articles-hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.articles-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-categories {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 8px 15px;
+    min-width: 250px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 0.95rem;
+}
+
+.search-box i {
+    color: #777;
+}
+
+/* 紧凑型文章列表 */
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.article-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.article-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.article-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article-date {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.article-category {
+    background: var(--primary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.article-views {
+    font-size: 0.85rem;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: var(--secondary-color);
+}
+
+.article-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-title a:hover {
+    color: var(--primary-color);
+}
+
+.article-excerpt {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.article-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.article-tag {
+    background: #f1f3f5;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    color: var(--accent-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.pagination-btn.active, .pagination-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.no-articles {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .articles-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .articles-hero {
+        height: 40vh;
+    }
+    
+    .articles-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-categories {
+        justify-content: center;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .article-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .article-views {
+        align-self: flex-start;
+    }
+}

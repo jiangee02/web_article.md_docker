@@ -1,0 +1,388 @@
+/* layout.css - 响应式布局 */
+
+/* 大屏幕桌面优化 */
+@media (max-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .tool-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+
+}
+/* 平板和手机通用修复 */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .content-area {
+        width: 100%;
+        flex: none;
+        order: 1;
+    }
+    
+    .sidebar {
+        width: 100%;
+        flex: none;
+        position: static;
+        order: 2;
+    }
+    
+    /* 工具网格调整为4列 */
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    
+    .tool-item {
+        min-height: 130px;
+        padding: 12px;
+    }
+
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+
+
+    .tool-info h3 {
+        font-size: 0.85rem;
+    }
+    
+    
+    .tool-info p {
+        font-size: 0.7rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .site-title {
+        font-size: 3.5rem;
+        padding-top: 15vh;
+    }
+}
+
+/* 手机端详细修复 */
+@media (max-width: 768px) {
+    /* 头部导航修复 */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    
+    nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    nav ul li {
+        margin: 0 8px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+    
+    /* 英雄区域修复 */
+    .hero-section {
+        padding-top: 15vh;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    
+    .scroll-indicator {
+        bottom: 20px;
+        font-size: 1.2rem;
+    }
+    
+    /* 内容区域修复 */
+    .content-container {
+        padding: 40px 0;
+    }
+    
+    .main-content {
+        padding: 0 15px;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    /* 欢迎区域修复 */
+    .welcome-section {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .time-display {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .time {
+        font-size: 2.2rem;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+    
+    .greeting {
+        font-size: 1.1rem;
+    }
+    
+    /* 工具区域修复 */
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .tool-item {
+        min-height: 120px;
+        padding: 10px;
+    }
+    
+    
+    .tool-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 8px;
+    }
+
+    
+    .tool-info h3 {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+    
+    .tool-info p {
+        font-size: 0.65rem;
+    }
+    
+    /* 侧边栏修复 */
+    .avatar-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 8px;
+    }
+    
+    .stat-value {
+        font-size: 1.3rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .like-btn {
+        width: 80%;
+        padding: 12px;
+        margin: 10px auto;
+        font-size: 0.9rem;
+    }
+    
+    /* 页脚修复 */
+    footer {
+        padding: 20px 0 10px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-column a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin: 5px 10px;
+        font-size: 0.85rem;
+    }
+    
+    /* 返回顶部按钮修复 */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* 小屏手机彻底优化 */
+@media (max-width: 576px) {
+    .main-content {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    
+    .site-title {
+        font-size: 2rem;
+        padding-top: 12vh;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .tool-item {
+        min-height: 110px;
+        padding: 8px;
+    }
+    
+    .tool-link {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .tool-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 6px;
+    }
+    
+
+    
+    .tool-info {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .tool-info h3 {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+    
+    .tool-info p {
+        font-size: 0.6rem;
+    }
+
+    .card {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .card h2 {
+        font-size: 1.2rem;
+    }
+    
+    .time {
+        font-size: 1.8rem;
+    }
+    
+    nav ul li {
+        margin: 0 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* 超小屏手机优化 */
+@media (max-width: 375px) {
+    .site-title {
+        font-size: 1.7rem;
+        padding-top: 10vh;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .tool-item {
+        min-height: 100px;
+        padding: 6px;
+    }
+
+    .tool-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .tool-info h3 {
+        font-size: 0.7rem;
+    }
+    
+    .tool-info p {
+        font-size: 0.55rem;
+    }
+    
+    .time {
+        font-size: 1.6rem;
+    }
+    
+    .date {
+        font-size: 0.9rem;
+    }
+    
+    .greeting {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        gap: 3px;
+    }
+    
+    nav ul li {
+        margin: 0 4px;
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+}
+
+/* 横屏手机优化 */
+@media (max-width: 992px) and (orientation: landscape) {
+    .hero-section {
+        padding-top: 10vh;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
